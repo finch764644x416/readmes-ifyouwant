@@ -1,0 +1,1 @@
+word_or_name=readmes-ifyouwant; sha3_512_hash=$(echo -n $word_or_name | sha3sum -a 512); join_word_hash=$(echo -n $word_or_name$sha3_512_hash); string_25_char=${join_word_hash:0:25}; string_25_char+="4x416"; string_30_char=$string_25_char; echo "$string_25_char\n\n$sha3_512_hash\n\nSHA3-512" && echo "$string_30_char\n\n$sha3_512_hash\n\nSHA3-512" | pbcopy
